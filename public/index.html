@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TotalPass Refiere a tu Gym Usuarios</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script runat="server" src="scripts/form-post.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="hero-logo">
+          <img src="img/logos/totalpass.svg" alt="logo totalpass" />
+        </div>
+        <div class="hero-container">
+          <div class="hero-text">
+            <h2 class="hero-animate hero-title">Tu gym, estudio o spa favorito aún no está en TotalPass?</h2>
+            <div class="hero-copy hero-animate hero-subtitle">
+              <p>Compártenos la información del espacio<br class="hidden 2xl:block"> que te gustaría integrar a nuestra red y<br class="hidden 2xl:block"> nosotros nos encargamos del resto. </p>
+            </div>
+            <div class="hero-cta hero-animate hero-button">
+              <button onclick="handleHeroFormToggle()" class="btn-primary btn-xl">Únelo ahora</button>
+            </div>
+            <div class="hero-copy hero-animate hero-link">
+              <p>Si eres dueño de un gimnasio, estudio o spa, haz clic <a href="https://cloud.info.totalpass.com.mx/refiere-aliados">aquí</a>.</p>
+            </div>
+          </div>
+          <aside class="hero-form hero-animate hero-form-slide" id="hero-form">
+            <button class="modal-close" onclick="handleHeroFormToggle()" style="display: none;">×</button>
+            <h3>Completa el formulario</h3>
+              <div class="form-container">
+                <form method="POST">
+                    <div class="form-grid">
+                        <div>
+                            <label for="nombre_espacio">Nombre del espacio</label>
+                            <input
+                                id="nombre_espacio"
+                                name="nombre_espacio"
+                                type="text"
+                                placeholder="Ej. Mi Gimnasio"
+                                required
+                            >
+                        </div>
+                        <div>
+                            <label for="direccion">Dirección</label>
+                            <input
+                                id="direccion"
+                                name="direccion"
+                                type="text"
+                                placeholder="Calle, número y colonia"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div>
+                            <label for="estado">Estado</label>
+                            <select id="estado" name="estado" required>
+                                <option value="" disabled selected>Selecciona un estado</option>
+                                <option value="AGS">Aguascalientes</option>
+                                <option value="BC">Baja California</option>
+                                <option value="BCS">Baja California Sur</option>
+                                <option value="CAM">Campeche</option>
+                                <option value="CHIS">Chiapas</option>
+                                <option value="CHI">Chihuahua</option>
+                                <option value="CDMX">Ciudad de México</option>
+                                <option value="COAH">Coahuila</option>
+                                <option value="COL">Colima</option>
+                                <option value="DUR">Durango</option>
+                                <option value="GTO">Guanajuato</option>
+                                <option value="GRO">Guerrero</option>
+                                <option value="HGO">Hidalgo</option>
+                                <option value="JAL">Jalisco</option>
+                                <option value="MEX">Estado de México</option>
+                                <option value="MICH">Michoacán</option>
+                                <option value="MOR">Morelos</option>
+                                <option value="NAY">Nayarit</option>
+                                <option value="NL">Nuevo León</option>
+                                <option value="OAX">Oaxaca</option>
+                                <option value="PUE">Puebla</option>
+                                <option value="QRO">Querétaro</option>
+                                <option value="QR">Quintana Roo</option>
+                                <option value="SLP">San Luis Potosí</option>
+                                <option value="SIN">Sinaloa</option>
+                                <option value="SON">Sonora</option>
+                                <option value="TAB">Tabasco</option>
+                                <option value="TAM">Tamaulipas</option>
+                                <option value="TLAX">Tlaxcala</option>
+                                <option value="VER">Veracruz</option>
+                                <option value="YUC">Yucatán</option>
+                                <option value="ZAC">Zacatecas</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="tipo_inscripcion">Tipo de inscripción</label>
+                            <select id="tipo_inscripcion" name="tipo_inscripcion" required>
+                                <option value="" disabled selected>Selecciona</option>
+                                <option value="tipo_inscripcion_mensual">Mensualidad</option>
+                                <option value="tipo_inscripcion_paquete">Paquete</option>
+                                <option value="tipo_inscripcion_ambos">Ambos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div>
+                          <label for="categoria">¿A qué categoría pertenece?</label>
+                          <select id="categoria" name="categoria" required>
+                              <option value="" disabled selected>Selecciona</option>
+                              <option value="categoria_centro">Centro deportivo</option>
+                              <option value="categoria_gimnasio">Gimnasio</option>
+                              <option value="categoria_estudio">Estudio</option>
+                              <option value="categoria_wellness">Wellness</option>
+                              <option value="categoria_acuatico">Acuático</option>
+                              <option value="categoria_gimnasio_studio">Gimnasio + Studio</option>
+                              <option value="categoria_areas_publicas">Áreas públicas</option>
+                              <option value="categoria_canchas_deportivas">Canchas deportivas</option>
+                              <option value="categoria_otro">Otro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="redes_sociales">Página web o redes sociales</label>
+                            <input
+                                id="redes_sociales"
+                                name="redes_sociales"
+                                type="text"
+                                placeholder="Ej. https://www.tuweb.com o @tusredes"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div>
+                            <label for="tu_nombre">¿Cuál es tu nombre?</label>
+                            <input
+                                id="tu_nombre"
+                                name="tu_nombre"
+                                type="text"
+                                placeholder="Ej. Juan Pérez"
+                                required
+                            >
+                        </div>
+                        <div>
+                            <label for="tu_correo">¿Cuál es tu correo electrónico?</label>
+                            <input
+                                id="tu_correo"
+                                name="tu_correo"
+                                type="email"
+                                placeholder="Ej. tu.correo@ejemplo.com"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div>
+                            <label for="empresa_colaboras">¿En qué empresa colaboras?</label>
+                            <input
+                                id="empresa_colaboras"
+                                name="empresa_colaboras"
+                                type="text"
+                                placeholder="Ej. Mi Empresa S.A. de C.V."
+                                required
+                            >
+                        </div>
+                        <div class="form-button">
+                            <button class="btn-primary" type="submit">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+              </div>
+          </aside>
+        </div>
+      </section>
+      <section id="partners" class="partners">
+        <article class="partners-info">
+          <div class="partners-content scroll-animate animate-slide-left">
+            <h2>Este proceso puede tardar hasta 5 semanas en concluir. </h2>
+            <div>
+              <h3>Mientras tanto, sigue disfrutando de las +4,500 opciones que tenemos para ti.</h3>
+              <h3>Todas las encuentras en tu app.</h3>
+            </div>
+            <div class="hero-cta">
+              <button class="btn-primary btn-xl" onclick="window.open('https://totalpass.com/mx/mapa/', '_blank')">Ver mapa de gyms</button>
+            </div>
+          </div>
+          <div class="partners-image scroll-animate animate-slide-right">
+            <img class="partners-phone-img" src="img/phone-1.webp" alt="Partners Image" />
+          </div>
+        </article>
+        <div class="partners-logos scroll-animate animate-fade-scale">
+          <div class="scroll-animate animate-stagger animate-delay-100"><img src="img/logos/png/logo-sportcity.png" alt="Sportcity" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-200"><img src="img/logos/png/logo-9round.png" alt="9round" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-300"><img src="img/logos/png/logo-sportium.png" alt="Sportium" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-400"><img src="img/logos/png/logo-station.png" alt="Station" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-500"><img src="img/logos/png/logo-nelson.png" alt="Nelson Vargas" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-600"><img src="img/logos/png/logo-move.png" alt="Move Family" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-100"><img src="img/logos/png/logo-ymca.png" alt="YMCA" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-200"><img src="img/logos/png/logo-fitpass.png" alt="Fitpass" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-300"><img src="img/logos/png/logo-commando.png" alt="Commando" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-400"><img src="img/logos/png/logo-1111.png" alt="11:11 Fitness" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-500"><img src="img/logos/png/logo-smartfit.png" alt="SmartFit" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-600"><img src="img/logos/png/logo-sportica.png" alt="Sportica" /></div>
+        </div>
+      </section>
+
+      <section class="what-is">
+        <header class="what-is-header scroll-animate animate-slide-up">
+          <h2 class="what-is-h2">¿Qué es TotalPass?</h2>
+        </header>
+        <div class="what-is-video scroll-animate animate-fade-scale">
+          <iframe class="aspect-video" src="https://www.youtube.com/embed/QgCXt57wnXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="img/logos/totalpass.svg" alt="logo totalpass" />
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/TotalPassMX" target="_blank" rel="noopener noreferrer">
+              <img src="img/icons/icn-facebook.svg" alt="Facebook TotalPass" />
+            </a>
+            <a href="https://www.instagram.com/totalpassmx/" target="_blank" rel="noopener noreferrer">
+              <img src="img/icons/icn-instagram.svg" alt="Instagram TotalPass" />
+            </a>
+            <a href="https://www.linkedin.com/company/totalpassmx/" target="_blank" rel="noopener noreferrer">
+              <img src="img/icons/icn-linkedin.svg" alt="LinkedIn TotalPass" />
+            </a>
+            <a href="https://www.youtube.com/@TotalPassMX" target="_blank" rel="noopener noreferrer">
+              <img src="img/icons/icn-youtube.svg" alt="YouTube TotalPass" />
+            </a>
+            <a href="https://www.tiktok.com/@TotalPassMX" target="_blank" rel="noopener noreferrer">
+              <img src="img/icons/icn-tiktok.svg" alt="Tiktok TotalPass" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="#">Sobre TotalPass</a></li>
+            <li><a href="#">Para Empresas</a></li>
+            <li><a href="#">Para aliados</a></li>
+            <li><a href="#">Colaboradores</a></li>
+            <li><a href="#">Busca gimnasios</a></li>
+          </ul>
+          <div class="footer-links-bottom">
+            <a href="#">Quiénes somos</a>
+            <a href="#">Blog</a>
+            <a href="#">Ayuda</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-app">
+        <p>Descarga nuestra aplicación</p>
+        <div class="footer-app-links">
+          <a href="https://apps.apple.com/mx/app/totalpass-mx/id1508708850" target="_blank" rel="noopener noreferrer">
+            <img src="img/icons/icn-app-store.svg" alt="App Store TotalPass" />
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.totalpass.app&hl=es_MX&gl=US" target="_blank" rel="noopener noreferrer">
+            <img src="img/icons/icn-google-play.svg" alt="Google Play TotalPass" />
+          </a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+
+        <a href="#">Términos y condiciones</a></p>
+        <p><a href="#">Aviso de privacidad</a>
+      </div>
+    </footer>
+  </body>
+  <script src="scripts/focus-form.js"></script>
+  <script src="scripts/scroll-animations.js"></script>
+  <script src="scripts/cookie-alert.js"></script>
+</html>
