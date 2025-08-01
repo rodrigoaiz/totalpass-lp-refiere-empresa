@@ -166,13 +166,16 @@ html {
     }
   }
   .partners-info {
-    @apply grid grid-cols-3 gap-2 sm:gap-8 max-w-7xl mx-auto;
+    @apply gap-2 sm:gap-8 max-w-7xl mx-auto;
     h2{
       @apply text-lg text-pretty;
     }
     h3{
       @apply text-3xl font-semibold xl:text-balance mb-2;
     }
+  }
+  .partners-header {
+    @apply max-w-7xl mx-auto mt-5 mb-6 md:my-10;
   }
   .partners-content{
     @apply col-span-3 md:col-span-2 flex flex-col justify-center gap-y-10;
@@ -185,6 +188,34 @@ html {
   }
   .partners-phone-img {
     @apply max-w-3/6 md:max-w-5/6 lg:max-w-3/4;
+  }
+  .partners-bento {
+    @apply md:grid md:grid-cols-4 gap-3;
+
+  }
+  .partners-bento-item {
+    @apply p-4 bg-gray-100 rounded-2xl mt-2 md:mt-0;
+    h4 {
+      @apply text-lg font-semibold my-2;
+    }
+    p {
+      @apply text-sm font-light leading-tight mb-4;
+    }
+  }
+  .partners-footer {
+    @apply max-w-7xl mx-auto mt-10 md:grid grid-cols-3 pb-10 md:pt-10;
+    :first-child {
+      @apply md:col-span-2 flex items-center;
+    }
+    p {
+      @apply mb-10 text-3xl leading-tight font-semibold text-pretty
+    }
+    :last-child {
+      @apply mt-2 md:mt-0 flex items-center justify-end md:justify-center;
+      button {
+        @apply md:text-xl;
+      }
+    }
   }
 
   /* What is it?! */
@@ -203,6 +234,32 @@ html {
     iframe {
       @apply w-full mx-auto aspect-video rounded-2xl;
     }
+  }
+
+  .what-is-content{
+    @apply max-w-7xl mx-auto;
+
+  }
+  .what-is-contact{
+    @apply xl:mt-18;
+  }
+  .what-is-lead {
+    @apply text-3xl md:text-4xl md:max-w-2/3 leading-tight font-semibold text-pretty;
+    span {
+      @apply text-primary-green;
+    }
+  }
+  .what-is-steps {
+    @apply grid grid-cols-1 sm:grid-cols-3 gap-6 my-10;
+  }
+  .what-is-step {
+    @apply p-4 bg-secondary-green rounded-2xl;
+  }
+  .what-is-number {
+    @apply text-lg font-semibold mb-2 bg-secondary-green-light rounded-full size-8 flex items-center justify-center text-secondary-green-extradark
+  }
+  .what-is-contact{
+    @apply md:grid grid-cols-2 max-w-7xl mx-auto;
   }
 
   /* Footer */
