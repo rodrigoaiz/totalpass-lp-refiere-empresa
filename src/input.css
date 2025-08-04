@@ -79,13 +79,13 @@ html {
     @apply px-5 xl:px-0;
   }
   .btn-primary {
-    @apply bg-primary-green hover:bg-primary-green/75 text-secondary-green-extradark px-6 py-3 rounded-full;
+    @apply bg-primary-green hover:bg-primary-green/90 text-secondary-green-extradark px-6 py-3 rounded-full;
   }
   .btn-secondary {
     @apply border border-primary-green text-primary-green hover:bg-primary-green/10;
   }
   .btn-xl {
-    @apply text-lg xl:text-xl px-10 py-5 rounded-full;
+    @apply text-lg xl:text-xl px-10 py-4 rounded-full;
   }
   .pill{
     @apply inline-flex items-center px-5 py-2 rounded-full text-sm text-pretty bg-secondary-green-light text-secondary-green-extradark font-medium;
@@ -110,15 +110,30 @@ html {
     }
   }
   .hero-container {
-    @apply h-11/12 w-full lg:max-w-11/12 2xl:max-w-4/5 mx-auto grid xl:grid-cols-2 xl:gap-x-10 gap-y-4 items-center;
+    @apply h-11/12 w-full lg:max-w-11/12 2xl:max-w-4/5 mx-auto grid xl:grid-cols-2 xl:gap-x-2 gap-y-4 items-center;
   }
   .hero-text {
     @apply flex flex-col justify-end gap-y-3 2xl:gap-y-6 text-left h-dvh xl:h-auto;
     h2 {
-      @apply text-4xl 2xl:text-5xl font-semibold leading-tight text-balance;
+      @apply text-4xl 2xl:text-5xl font-semibold leading-tight text-pretty;
     }
   }
+  .hero-copys-container{
+    @apply xl:max-w-3/4;
+  }
   .hero-copy {
+    @apply text-base md:text-lg leading-tight xl:text-balance mt-4 mb-6 grid grid-cols-3 xl:gap-x-10 xl:gap-y-8;
+    h3 {
+      @apply text-4xl font-semibold leading-tight text-balance;
+    }
+    a {
+      @apply text-primary-green hover:text-primary-green/75 transition-colors underline underline-offset-4;
+    }
+    span {
+      @apply leading-tight text-balance;
+    }
+  }
+  .hero-footer {
     @apply text-base md:text-lg lg:text-2xl leading-tight text-pretty xl:text-balance mt-4 mb-6;
     a {
       @apply text-primary-green hover:text-primary-green/75 transition-colors underline underline-offset-4;
@@ -126,6 +141,9 @@ html {
   }
   .hero-cta {
     @apply flex items-center justify-center md:justify-start;
+    a {
+      @apply text-black no-underline hover:text-secondary-green-extradark transition-colors;
+    }
   }
   .hero-form {
     @apply bg-white text-gray-800 py-3 px-4 md:p-6 rounded-2xl shadow-lg xl:ml-10 mb-10 xl:mb-0;
@@ -252,7 +270,7 @@ html {
   }
 
   .what-is-content{
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto xl:mt-24;
 
   }
   .what-is-contact{
@@ -265,7 +283,7 @@ html {
     }
   }
   .what-is-steps {
-    @apply grid grid-cols-1 sm:grid-cols-3 gap-6 my-10;
+    @apply grid grid-cols-1 sm:grid-cols-3 gap-6 my-18;
   }
   .what-is-step {
     @apply p-4 bg-secondary-green rounded-2xl;
@@ -311,7 +329,7 @@ html {
   .success-allies-logos{
     @apply bg-gray-200 py-5 px-5 md:py-10 md:px-5 rounded-3xl flex items-center ;
     div {
-      @apply grid grid-cols-4 gap-x-6 md:gap-x-12 gap-y-5 w-full text-center;
+      @apply grid grid-cols-6 gap-x-6 md:gap-x-12 gap-y-5 w-full text-center;
       article {
         @apply flex items-center justify-center;
       }

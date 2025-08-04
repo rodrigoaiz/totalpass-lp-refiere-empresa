@@ -16,28 +16,29 @@
         <div class="hero-container">
           <div class="hero-text">
             <h2 class="hero-animate hero-title">Lleva bienestar total a tu empresa</h2>
-            <div class="hero-copy hero-animate hero-subtitle">
-              <article>
-                <h3>+4,500</h3>
-                <span>gimnasios, estudios y spas en todo México</span>
-              </article>
-              <article>
-                <span>Plataformas para cuidar la salud mental y obtener sesiones con especialistas en línea</span>
-              </article>
-              <article>
-                <h3>+250</h3>
-                <span>actividades para probar todos los días</span>
-              </article>
+            <div class="hero-copys-container">
+              <div class="hero-copy hero-animate hero-subtitle">
+                <article>
+                  <h3>+4,500</h3>
+                  <span>gimnasios, estudios y spas en todo México</span>
+                </article>
+                <article class="col-span-2">
+                  <span>Plataformas para cuidar la salud mental y obtener sesiones con especialistas en línea</span>
+                </article>
+                <article>
+                  <h3>+250</h3>
+                  <span>actividades para probar todos los días</span>
+                </article>
             </div>
-            <div class="hero-cta hero-animate hero-button">
-              <button onclick="handleHeroFormToggle()" class="btn-primary btn-xl">Descubrir más</button>
             </div>
             <div class="hero-copy hero-animate hero-link">
-              <p>Si tu empresa tiene de 10 a 100 colaboradores, también puedes unirla. <a href="https://cloud.info.totalpass.com.mx/refiere-aliados">Da clic aquí.</a></p>
+              <div class="hero-cta hero-animate hero-button">
+                <a href="#partners" class="btn-primary btn-xl">Descubrir más</a>
+              </div>
+              <p class="col-span-2">Si tu empresa tiene <strong>de 10 a 100 colaboradores</strong>, también puedes unirla. <a href="https://simule.totalpass.com/mx?_ga=2.135207473.147648072.1753205258-1892478949.1736295446&_gl=1*14m8ljc*_gcl_au*NzI1Mjk3MzE1LjE3NTIxODk2NjQ.*_ga*MTg5MjQ3ODk0OS4xNzM2Mjk1NDQ2*_ga_CCP4G0JJDT*czE3NTMzMTI2NzYkbzE0NyRnMSR0MTc1MzMxMzI3OSRqNjAkbDAkaDA">Da clic aquí.</a></p>
             </div>
           </div>
           <aside class="hero-form hero-animate hero-form-slide" id="hero-form">
-            <button class="modal-close" onclick="handleHeroFormToggle()" style="display: none;">×</button>
             <h3>Completa el formulario</h3>
               <div class="form-container">
                 <form method="POST">
@@ -186,18 +187,12 @@
       </section>
       <section id="partners" class="partners">
         <div class="partners-logos scroll-animate animate-fade-scale">
-          <div class="scroll-animate animate-stagger animate-delay-100"><img src="img/logos/png/logo-sportcity.png" alt="Sportcity" /></div>
-          <div class="scroll-animate animate-stagger animate-delay-200"><img src="img/logos/png/logo-9round.png" alt="9round" /></div>
-          <div class="scroll-animate animate-stagger animate-delay-300"><img src="img/logos/png/logo-sportium.png" alt="Sportium" /></div>
-          <div class="scroll-animate animate-stagger animate-delay-400"><img src="img/logos/png/logo-station.png" alt="Station" /></div>
-          <div class="scroll-animate animate-stagger animate-delay-500"><img src="img/logos/png/logo-nelson.png" alt="Nelson Vargas" /></div>
-          <div class="scroll-animate animate-stagger animate-delay-600"><img src="img/logos/png/logo-move.png" alt="Move Family" /></div>
-          <div class="scroll-animate animate-stagger animate-delay-100"><img src="img/logos/png/logo-ymca.png" alt="YMCA" /></div>
-          <div class="scroll-animate animate-stagger animate-delay-200"><img src="img/logos/png/logo-fitpass.png" alt="Fitpass" /></div>
-          <div class="scroll-animate animate-stagger animate-delay-300"><img src="img/logos/png/logo-commando.png" alt="Commando" /></div>
-          <div class="scroll-animate animate-stagger animate-delay-400"><img src="img/logos/png/logo-1111.png" alt="11:11 Fitness" /></div>
-          <div class="scroll-animate animate-stagger animate-delay-500"><img src="img/logos/png/logo-smartfit.png" alt="SmartFit" /></div>
-          <div class="scroll-animate animate-stagger animate-delay-600"><img src="img/logos/png/logo-sportica.png" alt="Sportica" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-100"><img src="img/logos/png/LP_logos_cocacola.png" alt="Coca Cola" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-100"><img src="img/logos/png/LP_logos_Bimbo.png" alt="Bimbo" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-100"><img src="img/logos/png/LP_logos_cinemex.png" alt="Cinemex" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-100"><img src="img/logos/png/LP_logos_manpower.png" alt="Manpower" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-100"><img src="img/logos/png/LP_logos_Liverpool.png" alt="Liverpool" /></div>
+          <div class="scroll-animate animate-stagger animate-delay-100"><img src="img/logos/png/LP_logos_nubank.png" alt="Nubank" /></div>
         </div>
         <header id="partners-header" class="partners-header">
           <h2 class="pill" data-aos="zoom-in">¿Por qué unir tu empresa a TotalPass?</h2>
@@ -260,7 +255,7 @@
             <p>Reduce gastos incrementando la<br> retención de talento</p>
           </div>
           <div>
-            <button class="btn-primary">Unir a mi empresa</button>
+            <a href="#what-is-contact" class="btn-primary">Unir a mi empresa</a>
           </div>
         </footer>
 
@@ -290,7 +285,7 @@
             </article>
           </div>
         </div>
-        <div class="what-is-contact">
+        <div id="what-is-contact" class="what-is-contact">
           <div class="what-is-image">
             <p class="what-is-lead">Completa tus datos y comienza hoy mismo</p>
             <div class="flex w-full pt-4 2xl:pt-8">
@@ -456,10 +451,15 @@
           <h3>Nuestros aliados</h3>
           <div class="success-allies-logos">
             <div>
-              <article><img src="img/logos/buq.svg" alt="" /></article>
-              <article><img src="img/logos/fitco.svg" alt="" /></article>
-              <article><img src="img/logos/les-mills.svg" alt="" /></article>
-              <article><img src="img/logos/evo.svg" alt="" /></article>
+              <article><img src="img/logos/png/LP_logos_Bimbo.png"  alt="Bimbo" /></article>
+              <article><img src="img/logos/png/LP_logos_cocacola.png" alt="Coca Cola" /></article>
+              <article><img src="img/logos/png/LP_logos_cinemex.png" alt="Cinemex" /></article>
+               <article><img src="img/logos/png/LP_logos_manpower.png" alt="Manpower" /></article>
+               <article><img src="img/logos/png/LP_logos_Liverpool.png" alt="Liverpool" /></article>
+                <article><img src="img/logos/png/LP_logos_nubank.png" alt="Nubank" /></article>
+
+
+
             </div>
           </div>
         </div>
@@ -467,7 +467,7 @@
 
       <section class="join-us" data-aos="zoom-in" data-aos-duration="800">
         <h3>Prueba TotalPass.<br /> A tus colaboradores les va a encantar.</h3>
-        <button class="btn btn-primary">Unirme ahora</button>
+        <a href="#partners" class="btn btn-primary">Unirme ahora</a>
       </section>
     </main>
     <footer class="footer">
