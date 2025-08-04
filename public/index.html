@@ -29,7 +29,7 @@
                   <h3>+250</h3>
                   <span>actividades para probar todos los días</span>
                 </article>
-            </div>
+              </div>
             </div>
             <div class="hero-copy hero-animate hero-link">
               <div class="hero-cta hero-animate hero-button">
@@ -40,148 +40,161 @@
           </div>
           <aside class="hero-form hero-animate hero-form-slide" id="hero-form">
             <h3>Completa el formulario</h3>
-              <div class="form-container">
-                <form method="POST">
-                    <div class="form-grid">
-                        <div>
-                            <label for="nombre_espacio">Nombre del espacio</label>
-                            <input
-                                id="nombre_espacio"
-                                name="nombre_espacio"
-                                type="text"
-                                placeholder="Ej. Mi Gimnasio"
-                                required
-                            >
-                        </div>
-                        <div>
-                            <label for="direccion">Dirección</label>
-                            <input
-                                id="direccion"
-                                name="direccion"
-                                type="text"
-                                placeholder="Calle, número y colonia"
-                                required
-                            >
-                        </div>
+            <div class="form-container">
+              <form method="POST">
+                <div class="form-grid">
+                    <div>
+                        <label for="nombre_completo">Nombre completo</label>
+                        <input
+                            id="nombre_completo"
+                            name="nombre_completo"
+                            type="text"
+                            required
+                        >
                     </div>
+                    <div>
+                        <label for="empresa">Empresa</label>
+                        <input
+                            id="empresa"
+                            name="empresa"
+                            type="text"
+                            required
+                        >
+                    </div>
+                </div>
 
-                    <div class="form-grid">
-                        <div>
-                            <label for="estado">Estado</label>
-                            <select id="estado" name="estado" required>
-                                <option value="" disabled selected>Selecciona un estado</option>
-                                <option value="AGS">Aguascalientes</option>
-                                <option value="BC">Baja California</option>
-                                <option value="BCS">Baja California Sur</option>
-                                <option value="CAM">Campeche</option>
-                                <option value="CHIS">Chiapas</option>
-                                <option value="CHI">Chihuahua</option>
-                                <option value="CDMX">Ciudad de México</option>
-                                <option value="COAH">Coahuila</option>
-                                <option value="COL">Colima</option>
-                                <option value="DUR">Durango</option>
-                                <option value="GTO">Guanajuato</option>
-                                <option value="GRO">Guerrero</option>
-                                <option value="HGO">Hidalgo</option>
-                                <option value="JAL">Jalisco</option>
-                                <option value="MEX">Estado de México</option>
-                                <option value="MICH">Michoacán</option>
-                                <option value="MOR">Morelos</option>
-                                <option value="NAY">Nayarit</option>
-                                <option value="NL">Nuevo León</option>
-                                <option value="OAX">Oaxaca</option>
-                                <option value="PUE">Puebla</option>
-                                <option value="QRO">Querétaro</option>
-                                <option value="QR">Quintana Roo</option>
-                                <option value="SLP">San Luis Potosí</option>
-                                <option value="SIN">Sinaloa</option>
-                                <option value="SON">Sonora</option>
-                                <option value="TAB">Tabasco</option>
-                                <option value="TAM">Tamaulipas</option>
-                                <option value="TLAX">Tlaxcala</option>
-                                <option value="VER">Veracruz</option>
-                                <option value="YUC">Yucatán</option>
-                                <option value="ZAC">Zacatecas</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="tipo_inscripcion">Tipo de inscripción</label>
-                            <select id="tipo_inscripcion" name="tipo_inscripcion" required>
-                                <option value="" disabled selected>Selecciona</option>
-                                <option value="tipo_inscripcion_mensual">Mensualidad</option>
-                                <option value="tipo_inscripcion_paquete">Paquete</option>
-                                <option value="tipo_inscripcion_ambos">Ambos</option>
-                            </select>
-                        </div>
+                <div class="form-grid">
+                    <div>
+                        <label for="email_corporativo">Email corporativo</label>
+                        <input
+                            id="email_corporativo"
+                            name="email_corporativo"
+                            type="email"
+                            required
+                        >
                     </div>
+                    <div>
+                        <label for="telefono">Teléfono</label>
+                        <input
+                            id="telefono"
+                            name="telefono"
+                            type="tel"
+                            required
+                        >
+                    </div>
+                </div>
 
-                    <div class="form-grid">
-                        <div>
-                          <label for="categoria">¿A qué categoría pertenece?</label>
-                          <select id="categoria" name="categoria" required>
-                              <option value="" disabled selected>Selecciona</option>
-                              <option value="categoria_centro">Centro deportivo</option>
-                              <option value="categoria_gimnasio">Gimnasio</option>
-                              <option value="categoria_estudio">Estudio</option>
-                              <option value="categoria_wellness">Wellness</option>
-                              <option value="categoria_acuatico">Acuático</option>
-                              <option value="categoria_gimnasio_studio">Gimnasio + Studio</option>
-                              <option value="categoria_areas_publicas">Áreas públicas</option>
-                              <option value="categoria_canchas_deportivas">Canchas deportivas</option>
-                              <option value="categoria_otro">Otro</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="redes_sociales">Página web o redes sociales</label>
-                            <input
-                                id="redes_sociales"
-                                name="redes_sociales"
-                                type="text"
-                                placeholder="Ej. https://www.tuweb.com o @tusredes"
-                            >
-                        </div>
+                <div class="form-grid">
+                    <div>
+                        <label for="rol_actual">Rol actual en la organización*</label>
+                        <select id="rol_actual" name="rol_actual" required>
+                            <option value="" disabled selected>Selecciona</option>
+                            <option value="CEO">CEO</option>
+                            <option value="Socio">Socio</option>
+                            <option value="Director">Director</option>
+                            <option value="Analista">Analista</option>
+                            <option value="Gerente">Gerente</option>
+                        </select>
                     </div>
+                    <div>
+                        <label for="total_colaboradores">Nº total de colaboradores en la empresa</label>
+                        <select id="total_colaboradores" name="total_colaboradores" required>
+                            <option value="" disabled selected>Selecciona</option>
+                            <option value="10-299">10-299</option>
+                            <option value="300-1499">300-1499</option>
+                            <option value="Mas-1500">Mas de 1500</option>
+                        </select>
+                    </div>
+                </div>
 
-                    <div class="form-grid">
-                        <div>
-                            <label for="tu_nombre">¿Cuál es tu nombre?</label>
-                            <input
-                                id="tu_nombre"
-                                name="tu_nombre"
-                                type="text"
-                                placeholder="Ej. Juan Pérez"
-                                required
-                            >
-                        </div>
-                        <div>
-                            <label for="tu_correo">¿Cuál es tu correo electrónico?</label>
-                            <input
-                                id="tu_correo"
-                                name="tu_correo"
-                                type="email"
-                                placeholder="Ej. tu.correo@ejemplo.com"
-                                required
-                            >
-                        </div>
+                <div class="form-grid">
+                    <div>
+                        <label for="codigo_postal">Código postal</label>
+                        <input
+                            id="codigo_postal"
+                            name="codigo_postal"
+                            type="text"
+                            required
+                        >
                     </div>
+                    <div>
+                        <label for="presupuesto_asignado">¿Dispone de presupuesto asignado para la implementación del beneficio?</label>
+                        <select id="presupuesto_asignado" name="presupuesto_asignado" required>
+                            <option value="" disabled selected>Selecciona</option>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
 
-                    <div class="form-grid">
-                        <div>
-                            <label for="empresa_colaboras">¿En qué empresa colaboras?</label>
-                            <input
-                                id="empresa_colaboras"
-                                name="empresa_colaboras"
-                                type="text"
-                                placeholder="Ej. Mi Empresa S.A. de C.V."
-                                required
-                            >
-                        </div>
-                        <div class="form-button">
-                            <button class="btn-primary" type="submit">Enviar</button>
-                        </div>
+                <div class="form-grid">
+                    <div>
+                        <label for="tiempo_implementacion">Tiempo de implementación</label>
+                        <select id="tiempo_implementacion" name="tiempo_implementacion" required>
+                            <option value="" disabled selected>Selecciona</option>
+                            <option value="inmediato">Inmediato</option>
+                            <option value="menos-3_meses">Menos de 3 meses</option>
+                            <option value="mas-6_meses">Más de 6 meses</option>
+                        </select>
                     </div>
-                </form>
-              </div>
+                    <div>
+                        <label for="estado">¿En qué estado se localiza la empresa?</label>
+                        <select id="estado" name="estado" required>
+                            <option value="" disabled selected>Selecciona un estado</option>
+                            <option value="AGS">Aguascalientes</option>
+                            <option value="BC">Baja California</option>
+                            <option value="BCS">Baja California Sur</option>
+                            <option value="CAM">Campeche</option>
+                            <option value="CHIS">Chiapas</option>
+                            <option value="CHI">Chihuahua</option>
+                            <option value="CDMX">Ciudad de México</option>
+                            <option value="COAH">Coahuila</option>
+                            <option value="COL">Colima</option>
+                            <option value="DUR">Durango</option>
+                            <option value="GTO">Guanajuato</option>
+                            <option value="GRO">Guerrero</option>
+                            <option value="HGO">Hidalgo</option>
+                            <option value="JAL">Jalisco</option>
+                            <option value="MEX">Estado de México</option>
+                            <option value="MICH">Michoacán</option>
+                            <option value="MOR">Morelos</option>
+                            <option value="NAY">Nayarit</option>
+                            <option value="NL">Nuevo León</option>
+                            <option value="OAX">Oaxaca</option>
+                            <option value="PUE">Puebla</option>
+                            <option value="QRO">Querétaro</option>
+                            <option value="QR">Quintana Roo</option>
+                            <option value="SLP">San Luis Potosí</option>
+                            <option value="SIN">Sinaloa</option>
+                            <option value="SON">Sonora</option>
+                            <option value="TAB">Tabasco</option>
+                            <option value="TAM">Tamaulipas</option>
+                            <option value="TLAX">Tlaxcala</option>
+                            <option value="VER">Veracruz</option>
+                            <option value="YUC">Yucatán</option>
+                            <option value="ZAC">Zacatecas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                  <div></div>
+                    <div class="form-button">
+                        <button class="btn-primary" type="submit">Enviar</button>
+                    </div>
+                </div>
+
+                <div class="form-checkbox">
+                    <input
+                        id="acuerdo"
+                        name="acuerdo"
+                        type="checkbox"
+                        required
+                    >
+                    <label for="acuerdo">Comprendo que este beneficio corporativo está destinado a empresas y no a usuarios finales.</label>
+                </div>
+              </form>
+            </div>
           </aside>
         </div>
       </section>
@@ -289,137 +302,166 @@
           <div class="what-is-image">
             <p class="what-is-lead">Completa tus datos y comienza hoy mismo</p>
             <div class="flex w-full pt-4 2xl:pt-8">
-              <img src="img/phone-2.webp" class="hidden md:block max-w-2/3" alt="What is TotalPass" />
+              <img src="img/phone-2.webp" class="hidden md:block max-w-4/5" alt="What is TotalPass" />
             </div>
           </div>
           <aside class="hero-form">
+            <h3>Completa el formulario</h3>
               <div class="form-container">
-                <form
-                action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
-                method="POST"
-                >
-                  <input type="hidden" name="oid" value="TU_ORG_ID_SALESFORCE">
-                  <input type="hidden" name="retURL" value="https://">
-                  <div class="form-grid">
+                <form method="POST">
+                <div class="form-grid">
                     <div>
-                      <label for="nombre_completo">Nombre completo del dueño</label>
-                      <input
-                        id="nombre_completo"
-                        name="nombre_completo"
-                        type="text"
-                        placeholder="Ej. Juan Pérez López"
-                        required
-                      >
+                        <label for="nombre_completo_2">Nombre completo</label>
+                        <input
+                            id="nombre_completo_2"
+                            name="nombre_completo"
+                            type="text"
+                            required
+                        >
                     </div>
                     <div>
-                      <label for="telefono">Teléfono del dueño</label>
-                      <input
-                        id="telefono"
-                        name="telefono"
-                        type="tel"
-                        placeholder="Ej. 5512345678"
-                        pattern="[0-9]{10}"
-                        required
-                      >
-                      <!-- <p class="text-gray-500 text-xs mt-1">Formato: 10 dígitos sin espacios</p> -->
+                        <label for="empresa_2">Empresa</label>
+                        <input
+                            id="empresa_2"
+                            name="empresa"
+                            type="text"
+                            required
+                        >
                     </div>
-                  </div>
-                  <div class="form-grid">
+                </div>
+
+                <div class="form-grid">
                     <div>
-                      <label for="email">Email del dueño o gimnasio/estudio</label>
-                      <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="ejemplo@dominio.com"
-                        required
-                      >
+                        <label for="email_corporativo_2">Email corporativo</label>
+                        <input
+                            id="email_corporativo_2"
+                            name="email_corporativo"
+                            type="email"
+                            required
+                        >
                     </div>
                     <div>
-                      <label for="conoces_totalpass">¿Conoces TotalPass?</label>
-                      <select id="conoces_totalpass" name="conoces_totalpass" required>
-                        <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="Sí">Sí</option>
-                        <option value="No">No</option>
-                      </select>
+                        <label for="telefono_2">Teléfono</label>
+                        <input
+                            id="telefono_2"
+                            name="telefono"
+                            type="tel"
+                            required
+                        >
                     </div>
-                  </div>
-                  <div class="form-grid">
+                </div>
+
+                <div class="form-grid">
                     <div>
-                      <label for="afiliar">¿Quieres afiliar tu gimnasio/estudio a la red?</label>
-                      <select id="afiliar" name="afiliar" required>
-                        <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="Sí, estoy interesado">Sí, estoy interesado</option>
-                        <option value="No, solo información">No, solo información</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label for="nombre_gym">Nombre de tu gimnasio/estudio</label>
-                      <input
-                        id="nombre_gym"
-                        name="nombre_gym"
-                        type="text"
-                        placeholder="Ej. Fitness Revolution"
-                        required
-                      >
-                    </div>
-                  </div>
-                  <div class="form-grid">
-                    <div>
-                      <label for="estado">Estado</label>
-                      <select id="estado" name="estado" required>
-                        <option value="" disabled selected>Selecciona tu estado</option>
-                        <option value="CDMX">Ciudad de México</option>
-                        <option value="Jalisco">Jalisco</option>
-                      </select>
+                        <label for="rol_actual_2">Rol actual en la organización*</label>
+                        <select id="rol_actual_2" name="rol_actual" required>
+                            <option value="" disabled selected>Selecciona</option>
+                            <option value="CEO">CEO</option>
+                            <option value="Socio">Socio</option>
+                            <option value="Director">Director</option>
+                            <option value="Analista">Analista</option>
+                            <option value="Gerente">Gerente</option>
+                        </select>
                     </div>
                     <div>
-                      <label for="redes_sociales">Redes sociales de tu gimnasio/estudio</label>
-                      <input
-                        id="redes_sociales"
-                        name="redes_sociales"
-                        type="text"
-                        placeholder="Ej: @fitnessrevolution"
-                      >
+                        <label for="total_colaboradores_2">Nº total de colaboradores en la empresa</label>
+                        <select id="total_colaboradores_2" name="total_colaboradores" required>
+                            <option value="" disabled selected>Selecciona</option>
+                            <option value="10-299">10-299</option>
+                            <option value="300-1499">300-1499</option>
+                            <option value="Mas-1500">Mas de 1500</option>
+                        </select>
                     </div>
-                  </div>
-                  <div class="form-grid">
+                </div>
+
+                <div class="form-grid">
                     <div>
-                      <label for="tipo_inscripcion">Tipo de inscripción de tu gimnasio/estudio</label>
-                      <select id="tipo_inscripcion" name="tipo_inscripcion" required>
-                        <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="Membresía mensual">Membresía mensual</option>
-                        <option value="Clases sueltas">Clases sueltas</option>
-                        <option value="Ambos">Ambos</option>
-                      </select>
+                        <label for="codigo_postal_2">Código postal</label>
+                        <input
+                            id="codigo_postal_2"
+                            name="codigo_postal"
+                            type="text"
+                            required
+                        >
                     </div>
                     <div>
-                      <label for="tipo_servicio">Tipo de servicio de tu gimnasio/estudio</label>
-                      <select id="tipo_servicio" name="tipo_servicio" required>
-                        <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="Gimnasio tradicional">Gimnasio tradicional</option>
-                        <option value="Estudio de crossfit">Estudio de crossfit</option>
-                        <option value="Yoga/Pilates">Yoga/Pilates</option>
-                      </select>
+                        <label for="presupuesto_asignado_2">¿Dispone de presupuesto asignado para la implementación del beneficio?</label>
+                        <select id="presupuesto_asignado_2" name="presupuesto_asignado" required>
+                            <option value="" disabled selected>Selecciona</option>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
                     </div>
-                  </div>
-                  <div class="form-grid">
+                </div>
+
+                <div class="form-grid">
                     <div>
-                      <label for="numero_sucursales">Número de sucursales de tu gimnasio/estudio</label>
-                      <input
-                        id="numero_sucursales"
-                        name="numero_sucursales"
-                        type="number"
-                        min="1"
-                        placeholder="Ej. 2"
-                        required
-                      >
+                        <label for="tiempo_implementacion_2">Tiempo de implementación</label>
+                        <select id="tiempo_implementacion_2" name="tiempo_implementacion" required>
+                            <option value="" disabled selected>Selecciona</option>
+                            <option value="inmediato">Inmediato</option>
+                            <option value="menos-3_meses">Menos de 3 meses</option>
+                            <option value="mas-6_meses">Más de 6 meses</option>
+                        </select>
                     </div>
+                    <div>
+                        <label for="estado_2">¿En qué estado se localiza la empresa?</label>
+                        <select id="estado_2" name="estado" required>
+                            <option value="" disabled selected>Selecciona un estado</option>
+                            <option value="AGS">Aguascalientes</option>
+                            <option value="BC">Baja California</option>
+                            <option value="BCS">Baja California Sur</option>
+                            <option value="CAM">Campeche</option>
+                            <option value="CHIS">Chiapas</option>
+                            <option value="CHI">Chihuahua</option>
+                            <option value="CDMX">Ciudad de México</option>
+                            <option value="COAH">Coahuila</option>
+                            <option value="COL">Colima</option>
+                            <option value="DUR">Durango</option>
+                            <option value="GTO">Guanajuato</option>
+                            <option value="GRO">Guerrero</option>
+                            <option value="HGO">Hidalgo</option>
+                            <option value="JAL">Jalisco</option>
+                            <option value="MEX">Estado de México</option>
+                            <option value="MICH">Michoacán</option>
+                            <option value="MOR">Morelos</option>
+                            <option value="NAY">Nayarit</option>
+                            <option value="NL">Nuevo León</option>
+                            <option value="OAX">Oaxaca</option>
+                            <option value="PUE">Puebla</option>
+                            <option value="QRO">Querétaro</option>
+                            <option value="QR">Quintana Roo</option>
+                            <option value="SLP">San Luis Potosí</option>
+                            <option value="SIN">Sinaloa</option>
+                            <option value="SON">Sonora</option>
+                            <option value="TAB">Tabasco</option>
+                            <option value="TAM">Tamaulipas</option>
+                            <option value="TLAX">Tlaxcala</option>
+                            <option value="VER">Veracruz</option>
+                            <option value="YUC">Yucatán</option>
+                            <option value="ZAC">Zacatecas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                  <div></div>
                     <div class="form-button">
-                      <button class="btn-primary" type="submit">Enviar</button>
+                        <button class="btn-primary" type="submit">Enviar</button>
                     </div>
-                  <div>
+                </div>
+
+                <div class="form-checkbox">
+                    <input
+                        id="acuerdo_2"
+                        name="acuerdo"
+                        type="checkbox"
+                        required
+                    >
+                    <label for="acuerdo_2">Comprendo que este beneficio corporativo está destinado a empresas y no a usuarios finales.</label>
+                </div>
                 </form>
+
               </div>
           </aside>
         </div>

@@ -113,7 +113,7 @@ html {
     @apply h-11/12 w-full lg:max-w-11/12 2xl:max-w-4/5 mx-auto grid xl:grid-cols-2 xl:gap-x-2 gap-y-4 items-center;
   }
   .hero-text {
-    @apply flex flex-col justify-end gap-y-3 2xl:gap-y-6 text-left h-dvh xl:h-auto;
+    @apply flex flex-col justify-end gap-y-3 2xl:gap-y-6 text-left pt-24 xl:mt-0 xl:h-auto;
     h2 {
       @apply text-4xl 2xl:text-5xl font-semibold leading-tight text-pretty;
     }
@@ -122,7 +122,7 @@ html {
     @apply xl:max-w-3/4;
   }
   .hero-copy {
-    @apply text-base md:text-lg leading-tight xl:text-balance mt-4 mb-6 grid grid-cols-3 xl:gap-x-10 xl:gap-y-8;
+    @apply text-base md:text-lg leading-tight xl:text-balance mt-4 mb-6 grid gap-y-10 xl:grid-cols-3 xl:gap-x-10 xl:gap-y-8;
     h3 {
       @apply text-4xl font-semibold leading-tight text-balance;
     }
@@ -236,15 +236,15 @@ html {
     }
   }
   .partners-footer {
-    @apply max-w-7xl mx-auto mt-10 gap-20 flex flex-row pb-10 md:pt-10;
+    @apply max-w-7xl mx-auto mt-10 gap-20 flex flex-col xl:flex-row pb-10 md:pt-10;
     div {
-      @apply w-1/2;
+      @apply xl:w-1/2;
     }
     p {
       @apply text-2xl leading-tight text-pretty
     }
     div:last-child {
-      @apply mt-2 md:mt-0 flex items-center justify-end md:justify-center flex items-center;;
+      @apply mt-2 md:mt-0 justify-center flex items-center;
       button {
         @apply md:text-xl;
       }
@@ -277,7 +277,7 @@ html {
     @apply xl:mt-18;
   }
   .what-is-lead {
-    @apply text-3xl md:text-4xl md:max-w-2/3 leading-tight font-semibold text-pretty;
+    @apply text-3xl md:text-4xl leading-tight font-semibold text-balance;
     span {
       @apply text-primary-green;
     }
@@ -292,7 +292,7 @@ html {
     @apply text-lg font-semibold mb-2 bg-secondary-green-light rounded-full size-8 flex items-center justify-center text-secondary-green-extradark
   }
   .what-is-contact{
-    @apply md:grid grid-cols-2 max-w-7xl mx-auto;
+    @apply flex flex-col md:flex-row max-w-7xl mx-auto;
   }
 
   /* Success */
