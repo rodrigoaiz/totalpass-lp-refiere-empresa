@@ -68,6 +68,9 @@
 html {
   scroll-behavior: smooth;
 }
+/* img {
+  image-rendering: auto;
+} */
 @layer components {
   body {
     @apply text-primary-black font-poppins;
@@ -85,7 +88,7 @@ html {
     @apply border border-primary-green text-primary-green hover:bg-primary-green/10;
   }
   .btn-xl {
-    @apply text-lg xl:text-xl px-10 py-4 rounded-full;
+    @apply text-lg xl:text-xl px-10 py-4 rounded-full ;
   }
   .pill{
     @apply inline-flex items-center px-5 py-2 rounded-full text-sm text-pretty bg-secondary-green-light text-secondary-green-extradark font-medium;
@@ -122,7 +125,7 @@ html {
     @apply xl:max-w-3/4;
   }
   .hero-copy {
-    @apply text-base md:text-lg leading-tight xl:text-balance mt-4 mb-6 grid gap-y-10 xl:grid-cols-3 xl:gap-x-10 xl:gap-y-8;
+    @apply text-base md:text-lg leading-tight xl:text-balance mt-4 mb-6 md:grid gap-y-10 xl:grid-cols-3 xl:gap-x-10 xl:gap-y-8;
     h3 {
       @apply text-4xl font-semibold leading-tight text-balance;
     }
@@ -134,16 +137,13 @@ html {
     }
   }
   .hero-footer {
-    @apply text-base md:text-lg lg:text-2xl leading-tight text-pretty xl:text-balance mt-4 mb-6;
-    a {
-      @apply text-primary-green hover:text-primary-green/75 transition-colors underline underline-offset-4;
+    @apply flex flex-row md:gap-x-4 md:grid md:grid-cols-3 text-base md:text-lg lg:text-xl leading-tight mt-4 mb-6 bg-amber-300;
+    p {
+      @apply text-pretty 2xl:col-span-2 bg-amber-900;
     }
   }
   .hero-cta {
-    @apply flex items-center justify-center md:justify-start;
-    a {
-      @apply text-black no-underline hover:text-secondary-green-extradark transition-colors;
-    }
+    @apply flex flex-row items-center justify-center md:justify-start;
   }
   .hero-form {
     @apply bg-white text-gray-800 py-3 px-4 md:p-6 rounded-2xl shadow-lg xl:ml-10 mb-10 xl:mb-0;
@@ -175,15 +175,20 @@ html {
     @apply my-10 md:pt-10;
   }
   .partners-logos{
-    @apply py-10 grid grid-cols-2 gap-y-3 sm:gap-y-3 xl:gap-y-10 sm:grid-cols-6 text-center max-w-7xl mx-auto items-center;
+    @apply py-10 grid grid-cols-2 gap-y-3 md:gap-y-3 xl:gap-y-10 md:grid-cols-6 text-center max-w-7xl mx-auto items-center;
     div{
       @apply flex w-full items-center justify-center h-16 overflow-hidden
     }
     img {
      @apply brightness-150 w-9/12  md:object-cover;
+    image-rendering: auto;
     }
     .logos-chaparros{
       @apply max-h-10;
+    }
+    .logos-delgados{
+      @apply md:h-[36px] will-change-transform;
+      image-rendering: auto;
     }
   }
   .partners-info {
