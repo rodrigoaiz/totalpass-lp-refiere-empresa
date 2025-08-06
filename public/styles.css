@@ -419,21 +419,16 @@ html {
   .hero {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-secondary-green-dark);
-    --tw-gradient-from: var(--color-secondary-green-dark);
+    --tw-gradient-position: to bottom in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+    --tw-gradient-from: var(--color-secondary-green-extradark);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-    --tw-gradient-to: var(--color-secondary-green-mid);
+    --tw-gradient-from-position: 70%;
+    --tw-gradient-to: var(--color-secondary-green-dark);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
     color: var(--color-white);
-    @media (width >= 48rem) {
-      --tw-gradient-from-position: 20%;
-    }
     @media (width >= 80rem) {
       height: 100dvh;
-    }
-    @media (width >= 80rem) {
-      --tw-gradient-position: to bottom in oklab;
-      background-image: linear-gradient(var(--tw-gradient-stops));
     }
   }
   .hero-logo {
@@ -661,6 +656,9 @@ html {
       line-height: var(--tw-leading, var(--text-xl--line-height));
       --tw-font-weight: var(--font-weight-semibold);
       font-weight: var(--font-weight-semibold);
+    }
+    .form-checkbox {
+      margin-block: calc(var(--spacing) * 3);
     }
   }
   .form-grid {

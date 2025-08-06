@@ -101,7 +101,7 @@ html {
   }
   /* Hero */
   .hero {
-    @apply bg-secondary-green-dark xl:bg-gradient-to-b to-secondary-green-mid from-secondary-green-dark md:from-20% text-white xl:h-dvh flex flex-col;
+    @apply bg-gradient-to-b from-secondary-green-extradark to-secondary-green-dark from-70%  text-white xl:h-dvh flex flex-col;
   }
   .hero-logo {
     @apply w-full absolute xl:relative top-5 left-0 px-5 lg:px-0 py-5 lg:max-w-11/12 2xl:max-w-4/5 h-1/12 flex items-end justify-center xl:justify-start mx-auto;
@@ -149,6 +149,9 @@ html {
     @apply bg-white text-gray-800 py-3 px-4 md:p-6 rounded-2xl shadow-lg xl:ml-10 mb-10 xl:mb-0;
     h3 {
       @apply text-xl font-semibold mb-7;
+    }
+    .form-checkbox {
+      @apply my-3;
     }
   }
   .form-grid {
