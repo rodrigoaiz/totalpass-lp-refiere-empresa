@@ -104,10 +104,10 @@ html {
   }
   /* Hero */
   .hero {
-    @apply bg-gradient-to-b from-secondary-green-extradark to-secondary-green-dark from-70%  text-white xl:h-dvh flex flex-col;
+    @apply bg-gradient-to-b from-secondary-green-extradark to-secondary-green-dark from-70%  text-white h-full 2xl:h-dvh flex flex-col pb-10 2xl:pb-0;
   }
   .hero-logo {
-    @apply w-full absolute xl:relative top-5 left-0 px-5 lg:px-0 py-5 lg:max-w-11/12 2xl:max-w-4/5 h-1/12 flex items-end justify-center xl:justify-start mx-auto;
+    @apply w-full absolute xl:relative top-1 xl:top-5 left-0 px-5 lg:px-0 py-5 lg:max-w-11/12 2xl:max-w-4/5 h-1/12 flex items-end justify-center xl:justify-start mx-auto;
     img {
       @apply h-7 lg:h-8;
     }
@@ -116,16 +116,16 @@ html {
     @apply h-11/12 w-full lg:max-w-11/12 2xl:max-w-4/5 mx-auto grid xl:grid-cols-2 xl:gap-x-2 gap-y-4 items-center;
   }
   .hero-text {
-    @apply flex flex-col justify-end gap-y-3 2xl:gap-y-6 text-left pt-24 xl:mt-0 xl:h-auto;
+    @apply flex flex-col justify-end gap-y-3 2xl:gap-y-6 text-left pt-24 xl:pt-0 xl:mt-0 xl:h-auto;
     h2 {
       @apply text-4xl 2xl:text-5xl font-semibold leading-tight text-pretty;
     }
   }
   .hero-copys-container{
-    @apply xl:max-w-3/4;
+    @apply xl:max-w-5/6;
   }
   .hero-copy {
-    @apply text-base md:text-lg leading-tight xl:text-balance mt-4 mb-6 md:grid gap-y-10 xl:grid-cols-3 xl:gap-x-10 xl:gap-y-8;
+    @apply text-base md:text-lg leading-tight 2xl:text-balance mt-4 mb-6 md:grid gap-y-10 xl:grid-cols-2 2xl:grid-cols-3 xl:gap-x-10 xl:gap-y-8;
     h3 {
       @apply text-4xl font-semibold leading-tight text-balance;
     }
@@ -137,9 +137,9 @@ html {
     }
   }
   .hero-footer {
-    @apply flex flex-row md:gap-x-4 md:grid md:grid-cols-3 text-base md:text-lg lg:text-xl leading-tight mt-4 mb-6 bg-amber-300;
+    @apply flex flex-col gap-y-4 md:gap-x-4 md:grid md:grid-cols-3 text-base md:text-lg lg:text-xl leading-tight mt-4 mb-6;
     p {
-      @apply text-pretty 2xl:col-span-2 bg-amber-900;
+      @apply text-pretty md:col-span-2;
     }
   }
   .hero-cta {
@@ -151,7 +151,7 @@ html {
       @apply text-xl font-semibold mb-7;
     }
     .form-checkbox {
-      @apply my-3;
+      @apply my-3 text-sm;
     }
   }
   .form-grid {
