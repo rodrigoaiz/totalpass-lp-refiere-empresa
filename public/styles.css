@@ -237,12 +237,11 @@
   .resize {
     resize: both;
   }
+  .justify-center {
+    justify-content: center;
+  }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
-  }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -964,11 +963,12 @@ html {
   }
   .partners-bento {
     margin-block: calc(var(--spacing) * 10);
+    display: grid;
     gap: calc(var(--spacing) * 3);
-    @media (width >= 48rem) {
-      display: grid;
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    @media (width >= 48rem) {
+    @media (width >= 64rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
@@ -1010,16 +1010,16 @@ html {
     display: flex;
     max-width: var(--container-7xl);
     flex-direction: column;
-    gap: calc(var(--spacing) * 20);
-    padding-bottom: calc(var(--spacing) * 10);
+    row-gap: calc(var(--spacing) * 5);
+    padding-bottom: calc(var(--spacing) * 5);
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 10);
     }
-    @media (width >= 80rem) {
-      flex-direction: row;
-    }
     div {
-      @media (width >= 80rem) {
+      @media (width >= 48rem) {
         width: calc(1/2 * 100%);
       }
     }
@@ -1163,7 +1163,10 @@ html {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: calc(var(--spacing) * 6);
-    @media (width >= 40rem) {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @media (width >= 64rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     img {
@@ -1229,12 +1232,24 @@ html {
     div {
       display: grid;
       width: 100%;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
+      grid-template-columns: repeat(1, minmax(0, 1fr));
       column-gap: calc(var(--spacing) * 6);
-      row-gap: calc(var(--spacing) * 5);
+      row-gap: calc(var(--spacing) * 10);
       text-align: center;
+      @media (width >= 40rem) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       @media (width >= 48rem) {
         column-gap: calc(var(--spacing) * 12);
+      }
+      @media (width >= 64rem) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      @media (width >= 64rem) {
+        row-gap: calc(var(--spacing) * 20);
+      }
+      @media (width >= 80rem) {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
       }
       article {
         display: flex;
@@ -1254,24 +1269,18 @@ html {
     display: flex;
     max-width: var(--container-7xl);
     flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
+    row-gap: calc(var(--spacing) * 10);
     @media (width >= 48rem) {
       flex-direction: row;
+    }
+    @media (width >= 48rem) {
+      justify-content: space-between;
     }
     h3 {
       font-size: var(--text-2xl);
       line-height: var(--tw-leading, var(--text-2xl--line-height));
       --tw-leading: var(--leading-tight);
       line-height: var(--leading-tight);
-      text-wrap: pretty;
-    }
-    button {
-      @media (width >= 48rem) {
-        font-size: var(--text-xl);
-        line-height: var(--tw-leading, var(--text-xl--line-height));
-      }
     }
   }
   .footer {
@@ -1316,10 +1325,10 @@ html {
       max-width: var(--container-7xl);
     }
     @media (width >= 48rem) {
-      flex-direction: row;
-    }
-    @media (width >= 48rem) {
       align-items: center;
+    }
+    @media (width >= 80rem) {
+      flex-direction: row;
     }
   }
   .footer-socials {
